@@ -1,0 +1,6 @@
+local
+  $(SML_LIB)/basis/basis.mlb
+  ../ssl-socket.mlb
+in
+  testssl.sml
+end

@@ -1,0 +1,4 @@
+package github.com/melsman/mlkit-ssl-socket
+
+require {
+}

@@ -48,8 +48,8 @@ jobs:
         run: |
           mlkit --version
           smlpkg --version
-          find -L /usr -name 'libssl.a'
-          find -L /usr -name 'ssl.h' | grep 'openssl/ssl.h'
+          sudo find -L /usr -name 'libssl.a'
+          sudo find -L /usr -name 'ssl.h' | grep 'openssl/ssl.h'
 
       - name: Build (linux)
         if: ${{ env.OS == 'linux' }}

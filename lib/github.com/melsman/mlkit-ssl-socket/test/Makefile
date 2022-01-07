@@ -1,5 +1,5 @@
-SSL_INCLUDEDIR ?= /usr/include/ssl
-SSL_LIBDIR ?= /usr/lib/ssl
+SSL_INCLUDEDIR ?= /usr/include/openssl
+SSL_LIBDIR ?= /usr/lib/openssl
 
 OPT:=-Wall -std=gnu99 -g -O2
 CFLAGS=-DTAG_VALUES -DTAG_FREE_PAIRS -DENABLE_GC $(OPT) -I $(SSL_INCLUDEDIR)

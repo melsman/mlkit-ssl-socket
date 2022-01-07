@@ -2,10 +2,10 @@ OPT := -Wall -std=gnu99 -g -O2
 CFLAGS = -DTAG_VALUES -DTAG_FREE_PAIRS -DENABLE_GC $(OPT)
 
 MLKIT_INCLUDEDIR ?= /usr/share/mlkit/include/
-SSL_INCLUDEDIR ?= /usr/include/ssl
+SSL_INCLUDEDIR ?= /usr/include/openssl
 #SSL_INCLUDEDIR ?= /usr/local/opt/openssl/include
 
-SSL_LIBDIR ?= /usr/lib/ssl
+SSL_LIBDIR ?= /usr/lib/openssl
 
 MLKIT ?= mlkit
 

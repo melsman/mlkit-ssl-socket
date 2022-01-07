@@ -3,10 +3,7 @@
 SSL Socket library for the MLKit Standard ML compiler.
 
 This library provides SSL Socket functionality from within Standard ML
-using the `libssl` API. The functionality is provided through a simple
-socket interface:
-
-- Structure __SSLSocket : [DB](lib/github.com/melsman/mlkit-ssl-socket/sml-socket.sig)__.
+using the `libssl` API.
 
 ## Overview of MLB files
 
@@ -16,9 +13,9 @@ socket interface:
 
 ## Assumptions
 
-A working MLKit installation (see
-https://github.com/melsman/mlkit). Use `brew install mlkit` on macOS
-or download a binary release from https://github.com/melsman/mlkit.
+A working [MLKit installation](https://github.com/melsman/mlkit). Use
+`brew install mlkit` on macOS or download a binary release from the
+[MLKit github site](https://github.com/melsman/mlkit).
 
 ### Testing
 

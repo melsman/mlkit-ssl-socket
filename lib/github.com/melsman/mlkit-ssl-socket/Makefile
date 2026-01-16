@@ -1,11 +1,15 @@
-OPT := -Wall -std=gnu99 -g -O2
-CFLAGS = -DTAG_VALUES -DTAG_FREE_PAIRS -DENABLE_GC $(OPT)
-
+ifeq ($(shell uname),Darwin)
+MLKIT_INCLUDEDIR ?= /usr/local/share/mlkit/include/
+SSL_INCLUDEDIR ?= /usr/local/opt/openssl/include
+SSL_LIBDIR ?= /usr/local/opt/openssl/lib/
+else
 MLKIT_INCLUDEDIR ?= /usr/share/mlkit/include/
 SSL_INCLUDEDIR ?= /usr/include/openssl
-#SSL_INCLUDEDIR ?= /usr/local/opt/openssl/include
-
 SSL_LIBDIR ?= /usr/lib/openssl
+endif
+
+OPT := -Wall -std=gnu99 -g -O2
+CFLAGS = -DTAG_VALUES -DTAG_FREE_PAIRS -DENABLE_GC $(OPT)
 
 MLKIT ?= mlkit
 

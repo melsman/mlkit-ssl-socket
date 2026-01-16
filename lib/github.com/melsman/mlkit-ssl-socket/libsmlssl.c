@@ -48,12 +48,12 @@ sml_ssl_conn (uintptr_t ctx0, long fd) {
 
 // Send a vector over an SSL connection
 long
-sml_ssl_sendvec(uintptr_t con0, String v, long i, long n)
+sml_ssl_sendvec(uintptr_t con0, String v, size_t i, long n)
 {
   SSL* con = (SSL *)untag_scalar(con0);
   i = convertIntToC(i);
   n = convertIntToC(n);
-  long res = SSL_write(con, &(v->data) + i, n);
+  long res = SSL_write(con, (char*)(&(v->data)) + i, n);
   return convertIntToML(res);
 }
 

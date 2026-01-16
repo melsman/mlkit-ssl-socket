@@ -37,6 +37,11 @@ jobs:
         if: ${{ matrix.mlcomp == 'mlkit' }}
         uses: diku-dk/install-mlkit@HEAD
 
+      - name: Install OpenSSL (macos)
+        if: ${{ env.OS == 'darwin' }}
+        run: |
+          brew install openssl
+
       - name: Build
         run: |
           MLCOMP=${{ matrix.mlcomp }} MLKIT_INCLUDEDIR=$RUNHOME/.local/share/mlkit/include make clean all

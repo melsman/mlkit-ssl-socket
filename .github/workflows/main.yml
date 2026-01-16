@@ -41,8 +41,7 @@ jobs:
         if: ${{ env.OS == 'darwin' }}
         run: |
           arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-          arch -x86_64 /usr/local/bin/brew install openssl gcc
-          echo "/usr/local/bin" >> $GITHUB_PATH
+          arch -x86_64 /usr/local/bin/brew install openssl
 
       - name: Build
         run: |

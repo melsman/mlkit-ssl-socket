@@ -39,7 +39,7 @@ jobs:
 
       - name: Build
         run: |
-          MLCOMP=${{ matrix.mlcomp }} MLKIT_INCLUDEDIR=$RUNHOME/.local/mlkit/include make clean all
+          MLCOMP=${{ matrix.mlcomp }} MLKIT_INCLUDEDIR=$RUNHOME/.local/share/mlkit/include make clean all
 
       - name: Run tests
         run: |
